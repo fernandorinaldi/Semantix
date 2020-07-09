@@ -1,5 +1,4 @@
 # Semantix
-Testes
 
 #Teste Semantix - Líder Técnico
 
