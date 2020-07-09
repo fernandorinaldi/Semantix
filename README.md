@@ -33,13 +33,22 @@ O GroupByKey realiza um suffle dos dados para formar o par de chave/valor. Poré
 **Explique o que o código Scala abaixo faz.
 
 1- val textFile = sc . textFile ( "hdfs://..." )
+
 2- val counts = textFile . flatMap ( line => line . split ( " " ))
+
 3- . map ( word => ( word , 1 ))
+
 4- . reduceByKey ( _ + _ )
+
 5- counts . saveAsTextFile ( "hdfs://..." )
 
+
 1- Lê um arquivo no HDFS
+
 2- Divide o arquivo por palavras, utilizando o <espaço> (" ") como separador
+
 3- Realizada o mapeamento de cada palavra armazenando 1 para cada palavra encontrada
+
 4- Faz a redução realizando a contagem de todas as palavras
+
 5- Grava no HDFS um arquivo com o resultado da contagem
